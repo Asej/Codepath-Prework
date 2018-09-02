@@ -13,11 +13,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
 
-    var background: UIColor!
+    var background: UIColor!//default color
+    var defmessage: String!//default message
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         background = view.backgroundColor
+        defmessage = textLabel.text
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,13 +29,17 @@ class ViewController: UIViewController {
    
     
     @IBAction func didTapButton(_ sender: Any) {
-    textLabel.textColor = UIColor.blue
+    textLabel.textColor = UIColor.blue//changes text label color to blue
 
     }
 
     @IBAction func changeTextTap(_ sender: Any) {
-        textLabel.text=textField.text
+        if textField.text == "" {//checks if blank space is present
+            textLabel.text=defmessage
+        }else {
+            textLabel.text=textField.text}
         textField.text=""
+        
         view.endEditing(true)
     }
     
@@ -42,10 +48,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func doOver(_ sender: Any) {
-        textLabel.text="Hello From Anthony"
-        textLabel.textColor=UIColor.white
+        textLabel.text = defmessage
+        textLabel.textColor = UIColor.white
         view.backgroundColor = background
         textField.text=""
+        view.endEditing(true)
+
     }
 }
 
