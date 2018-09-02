@@ -5,9 +5,9 @@ This is the iOS Pre-work Project for code path's Mobile App Design Workshop Seri
 and allows for them to change the text from white to blue. Also, the user is allowed to edit the custom message & the background color, and every change can be reversed by tapping the background build.
 
 ### App Walk-though
-`TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README. (☝️ Remove this paragraph after after adding gif)
 
-<ihttps://imgur.com/a/p8UtH64><br>
+
+<https://imgur.com/a/p8UtH64><br>
 
 ### Required User Stories
 - [x] 1. User sees custom text in a label - Hello from {name}!
