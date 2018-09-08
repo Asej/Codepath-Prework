@@ -7,12 +7,13 @@
 //
 
 import UIKit
-
+import Foundation
 class ViewController: UIViewController {
 
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
-
+    
+    var count = 0;
     var background: UIColor!//default color
     var defmessage: String!//default message
     override func viewDidLoad() {
@@ -29,7 +30,30 @@ class ViewController: UIViewController {
    
     
     @IBAction func didTapButton(_ sender: Any) {
-    textLabel.textColor = UIColor.blue//changes text label color to blue
+        let number = Int(arc4random_uniform(6));
+        switch number {//changes text label based on number of taps
+        case 0:
+            textLabel.textColor = UIColor.red
+            count=0;
+        case 1:
+            textLabel.textColor = UIColor.orange
+            count=1;
+        case 2:
+            textLabel.textColor = UIColor.yellow
+            count=2;
+        case 3:
+            textLabel.textColor = UIColor.green
+            count=3;
+        case 4:
+            textLabel.textColor = UIColor.blue
+            count=4;
+        case 5:
+            textLabel.textColor = UIColor.purple
+            count=5;
+        default:
+            textLabel.textColor = UIColor.white
+
+        }
 
     }
 
@@ -42,11 +66,27 @@ class ViewController: UIViewController {
         
         view.endEditing(true)
     }
-    
     @IBAction func viewChangeTap(_ sender: Any) {
-        view.backgroundColor=UIColor.lightGray
+        let number = Int(arc4random_uniform(6));
+        switch number {//changes text label based on number of taps
+        case 0:
+            view.backgroundColor = UIColor.blue
+        case 1:
+            view.backgroundColor = UIColor.gray
+        case 2:
+            view.backgroundColor = UIColor.black
+        case 3:
+           view.backgroundColor = UIColor.cyan
+        case 4:
+            view.backgroundColor = UIColor.red
+        case 5:
+            view.backgroundColor = UIColor.purple
+        case 6:
+            view.backgroundColor = UIColor.black
+        default:
+            view.backgroundColor = UIColor.white
     }
-    
+    }
     @IBAction func doOver(_ sender: Any) {
         textLabel.text = defmessage
         textLabel.textColor = UIColor.white
