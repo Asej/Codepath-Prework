@@ -7,7 +7,7 @@ and allows for them to change the text from white to blue. Also, the user is all
 ### App Walk-though
 
 
-<https://imgur.com/a/p8UtH64><br>
+<https://imgur.com/a/xmuN6bx><br>
 
 ### Required User Stories
 - [x] 1. User sees custom text in a label - Hello from {name}!
